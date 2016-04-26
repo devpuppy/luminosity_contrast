@@ -1,4 +1,6 @@
 require "luminosity_contrast/version"
+require "luminosity_contrast/color"
+
 
 module LuminosityContrast
 
@@ -8,7 +10,8 @@ module LuminosityContrast
     # example: [0, 0, 0], [255.0, 255.0, 255.0]
     # returns the Luminosity Contrast Ratio between 1.0 and 21.0
     def ratio(rgb1, rgb2)
-      l1, l2 = [rgb1, rgb2].map { |rgb| relative_luminance(*rgb) }.sort
+      c1, c2 = [rgb1, rgb2].map { |rgb| Color.new(rgb) }
+      l1, l2 = [c1, c2].map(&:relative_luminance).sort
       (l2 + 0.05) / (l1 + 0.05)
     end
 
