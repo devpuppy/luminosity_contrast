@@ -7,7 +7,9 @@ module LuminosityContrast
   # module methods
   class << self
     # expects two RGB values as Arrays of three numbers
-    # example: [0, 0, 0], [255.0, 255.0, 255.0]
+    #   example: [0, 0, 0], [255.0, 255.0, 255.0]
+    # or hex code strings (3 or 6 characters)
+    #   example: '000000', 'fff'
     # returns the Luminosity Contrast Ratio between 1.0 and 21.0
     def ratio(rgb1, rgb2)
       c1, c2 = [rgb1, rgb2].map { |rgb| Color.new(rgb) }
