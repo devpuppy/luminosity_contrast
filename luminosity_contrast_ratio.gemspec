@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'luminosity_contrast_ratio/version'
+require 'luminosity_contrast/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "luminosity_contrast_ratio"
-  spec.version       = LuminosityContrastRatio::VERSION
+  spec.name          = "luminosity_contrast"
+  spec.version       = LuminosityContrast::VERSION
   spec.authors       = ["Justin Jones"]
   spec.email         = ["jj@kickstarter.com"]
 

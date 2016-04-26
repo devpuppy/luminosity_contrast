@@ -1,4 +1,4 @@
-require "luminosity_contrast_ratio/version"
+require "luminosity_contrast/version"
 
-module LuminosityContrastRatio
+module LuminosityContrast
 end
