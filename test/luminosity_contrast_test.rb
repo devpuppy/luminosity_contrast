@@ -5,7 +5,11 @@ class LuminosityContrastTest < Minitest::Test
     refute_nil ::LuminosityContrast::VERSION
   end
 
-  def test_it_does_something_useful
-    assert false
+  def test_relative_luminance_of_black
+    assert_equal 0.0, LuminosityContrast.relative_luminance(0,0,0)
+  end
+
+  def test_relative_luminance_of_white
+    assert_equal 1.0, LuminosityContrast.relative_luminance(255,255,255)
   end
 end
