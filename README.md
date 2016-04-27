@@ -22,7 +22,24 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+LuminosityContrast.ratio('000', 'ffffff')
+# => 21.0
+
+LuminosityContrast.ratio([0,0,0], [255,255,255])
+# => 21.0
+
+sienna = LuminosityContrast::Color.new('A0522D')
+LuminosityContrast.ratio(sienna, sienna)
+# => 1.0
+
+midnight_blue = LuminosityContrast::Color.new('191970')
+sky_blue = LuminosityContrast::Color.new('87CEEB')
+midnight_blue.ratio(sky_blue)
+# => 8.5256628387305
+sky_blue.ratio(midnight_blue)
+# => 8.5256628387305
+```
 
 ## Development
 
