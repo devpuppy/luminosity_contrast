@@ -4,7 +4,7 @@ Calculate the [Luminosity Contrast Ratio](https://www.w3.org/TR/WCAG20/#contrast
 
 Implements the formula in WCAG 2.0 guideline 1.4
 
-A recommended value is at least 4.5:1 (`4.5`) for standard text, or 3:1 (`3.0`) or greater for large text.
+A recommended value is at least 4.5:1 (`4.5`) for standard text, or at least 3:1 (`3.0`) for large text.
 
 ## Installation
 
@@ -25,7 +25,7 @@ Or install it yourself as:
 ## Usage
 
 ```ruby
-LuminosityContrast.ratio('000', 'ffffff')
+LuminosityContrast.ratio('000', 'fff')
 # => 21.0
 
 LuminosityContrast.ratio([0,0,0], [255,255,255])
