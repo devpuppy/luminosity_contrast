@@ -48,4 +48,11 @@ class ColorTest < Minitest::Test
   def assert_blue(color)
     assert_equal [0.0, 0.0, 255.0], color.to_rgb, "Color is not blue: #{color.to_rgb}"
   end
+
+  def test_color_compare
+    black = LuminosityContrast::Color.new('000')
+    white = LuminosityContrast::Color.new('fff')
+    assert_equal 21.0, black.ratio(white)
+    assert_equal 21.0, white.ratio(black)
+  end
 end

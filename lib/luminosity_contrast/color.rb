@@ -11,6 +11,10 @@ module LuminosityContrast
       LuminosityContrast.relative_luminance(r,g,b)
     end
 
+    def ratio(color)
+      LuminosityContrast.ratio(self, color)
+    end
+
     def to_rgb
       [r, g, b]
     end
