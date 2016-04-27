@@ -1,5 +1,7 @@
 # LuminosityContrast
 
+[![Gem Version](https://badge.fury.io/rb/luminosity_contrast.svg)](https://badge.fury.io/rb/luminosity_contrast)
+
 Calculate the [Luminosity Contrast Ratio](https://www.w3.org/TR/WCAG20/#contrast-ratiodef) of two colors to determine whether text can be easily read. This quantifies the legibility of colored text on a colored background for accessibility purposes.
 
 Implements the formula in WCAG 2.0 guideline 1.4
