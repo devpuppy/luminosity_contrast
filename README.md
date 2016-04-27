@@ -1,8 +1,10 @@
 # LuminosityContrast
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/luminosity_contrast`. To experiment with that code, run `bin/console` for an interactive prompt.
+Calculate the [Luminosity Contrast Ratio](https://www.w3.org/TR/WCAG20/#contrast-ratiodef) of two colors to determine whether text can be easily read. This quantifies the legibility of colored text on a colored background for accessibility purposes.
 
-TODO: Delete this and the text above, and describe your gem
+Implements the formula in WCAG 2.0 guideline 1.4
+
+A recommended value is at least 4.5:1 (`4.5`) for standard text, or 3:1 (`3.0`) or greater for large text.
 
 ## Installation
 
