@@ -45,6 +45,10 @@ sky_blue.ratio(midnight_blue)
 # => 8.5256628387305
 ```
 
+## Input validation (upcoming release)
+
+This version requires RGB components to be finite real numbers between 0 and 255. Invalid hex strings, missing RGB hash keys, out-of-range values, and nonnumeric components raise `ArgumentError`. Unlike earlier releases, numeric strings in RGB arrays or hashes are no longer implicitly converted with `to_f` (for example, `["255", "0", "0"]` is rejected). This is a backward-incompatible change; consider it when upgrading.
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
