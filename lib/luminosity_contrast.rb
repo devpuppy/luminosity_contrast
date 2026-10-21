@@ -30,15 +30,16 @@ module LuminosityContrast
     # @param b [Numeric] blue component between 0.0 and 255.0
     # @return [Float] relative luminance of a color between 0.0 and 1.0
     def relative_luminance(r, g, b)
-      (0.2126 * f(r)) + (0.7152 * f(g)) + (0.0722 * f(b))
+      rgb = Color.rgb_from([r, g, b])
+      (0.2126 * f(rgb[0])) + (0.7152 * f(rgb[1])) + (0.0722 * f(rgb[2]))
     end
 
     # assists calculation of relative luminance
-    # @param a single RGB component between 0.0 and 255.0
-    # @returns [Float] a value needed for relative luminance calculation
+    # @param component [Numeric] a single RGB component between 0.0 and 255.0
+    # @return [Float] a value needed for relative luminance calculation
     private def f(component)
       c = component / 255.0
-      c <= 0.03928 ? c : ((c + 0.055) / 1.055) ** 2.4
+      c <= 0.04045 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4
     end
   end
 end
