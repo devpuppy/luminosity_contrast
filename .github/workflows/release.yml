@@ -54,4 +54,4 @@ jobs:
             echo "Tag $RELEASE_TAG already exists; refusing to move it" >&2
             exit 1
           fi
-          gh release create "$RELEASE_TAG" --target "$GITHUB_SHA" --title "$RELEASE_TAG" --generate-notes --verify-tag=false
+          gh release create "$RELEASE_TAG" --target "$GITHUB_SHA" --title "$RELEASE_TAG" --generate-notes
